@@ -23,27 +23,20 @@ const ALL_LANGUAGES = [
   { code: 'ja', name: 'Japanese', native: '日本語', flag: '🇯🇵', dir: 'ltr' },
   { code: 'ko', name: 'Korean', native: '한국어', flag: '🇰🇷', dir: 'ltr' },
   { code: 'hi', name: 'Hindi', native: 'हिन्दी', flag: '🇮🇳', dir: 'ltr' },
-  { code: 'bn', name: 'Bengali', native: 'বাংলা', flag: '🇧🇩', dir: 'ltr' },
-  { code: 'ur', name: 'Urdu', native: 'اردو', flag: '🇵🇰', dir: 'rtl' },
-  { code: 'id', name: 'Indonesian', native: 'Bahasa Indonesia', flag: '🇮🇩', dir: 'ltr' },
-  { code: 'ms', name: 'Malay', native: 'Bahasa Melayu', flag: '🇲🇾', dir: 'ltr' },
-  { code: 'th', name: 'Thai', native: 'ไทย', flag: '🇹🇭', dir: 'ltr' },
-  { code: 'vi', name: 'Vietnamese', native: 'Tiếng Việt', flag: '🇻🇳', dir: 'ltr' },
   { code: 'pl', name: 'Polish', native: 'Polski', flag: '🇵🇱', dir: 'ltr' },
-  { code: 'uk', name: 'Ukrainian', native: 'Українська', flag: '🇺🇦', dir: 'ltr' },
   { code: 'nl', name: 'Dutch', native: 'Nederlands', flag: '🇳🇱', dir: 'ltr' },
-  { code: 'el', name: 'Greek', native: 'Ελληνικά', flag: '🇬🇷', dir: 'ltr' },
-  { code: 'cs', name: 'Czech', native: 'Čeština', flag: '🇨🇿', dir: 'ltr' },
   { code: 'sv', name: 'Swedish', native: 'Svenska', flag: '🇸🇪', dir: 'ltr' },
   { code: 'no', name: 'Norwegian', native: 'Norsk', flag: '🇳🇴', dir: 'ltr' },
-  { code: 'fi', name: 'Finnish', native: 'Suomi', flag: '🇫🇮', dir: 'ltr' },
   { code: 'da', name: 'Danish', native: 'Dansk', flag: '🇩🇰', dir: 'ltr' },
-  { code: 'ro', name: 'Romanian', native: 'Română', flag: '🇷🇴', dir: 'ltr' },
+  { code: 'fi', name: 'Finnish', native: 'Suomi', flag: '🇫🇮', dir: 'ltr' },
+  { code: 'el', name: 'Greek', native: 'Ελληνικά', flag: '🇬🇷', dir: 'ltr' },
+  { code: 'cs', name: 'Czech', native: 'Čeština', flag: '🇨🇿', dir: 'ltr' },
   { code: 'hu', name: 'Hungarian', native: 'Magyar', flag: '🇭🇺', dir: 'ltr' },
-  { code: 'sk', name: 'Slovak', native: 'Slovenčina', flag: '🇸🇰', dir: 'ltr' },
+  { code: 'ro', name: 'Romanian', native: 'Română', flag: '🇷🇴', dir: 'ltr' },
   { code: 'bg', name: 'Bulgarian', native: 'Български', flag: '🇧🇬', dir: 'ltr' },
   { code: 'sr', name: 'Serbian', native: 'Српски', flag: '🇷🇸', dir: 'ltr' },
   { code: 'hr', name: 'Croatian', native: 'Hrvatski', flag: '🇭🇷', dir: 'ltr' },
+  { code: 'sk', name: 'Slovak', native: 'Slovenčina', flag: '🇸🇰', dir: 'ltr' },
   { code: 'sl', name: 'Slovenian', native: 'Slovenščina', flag: '🇸🇮', dir: 'ltr' },
   { code: 'lt', name: 'Lithuanian', native: 'Lietuvių', flag: '🇱🇹', dir: 'ltr' },
   { code: 'lv', name: 'Latvian', native: 'Latviešu', flag: '🇱🇻', dir: 'ltr' },
@@ -92,13 +85,24 @@ const INSTRUCTORS = [
 ];
 
 // ============================================================
+// SOCIAL LINKS
+// ============================================================
+const SOCIAL_LINKS = [
+  { name: 'YouTube', url: 'https://www.youtube.com/@islamicummah571', icon: '▶️', color: 'bg-red-600', hover: 'hover:bg-red-700' },
+  { name: 'Telegram', url: 'https://t.me/lingoplatform', icon: '✈️', color: 'bg-blue-600', hover: 'hover:bg-blue-700' },
+  { name: 'Instagram', url: 'https://www.instagram.com/lingo_platform', icon: '📸', color: 'bg-pink-600', hover: 'hover:bg-pink-700' },
+  { name: 'WhatsApp', url: 'https://wa.me/996553720108', icon: '💬', color: 'bg-green-600', hover: 'hover:bg-green-700' },
+  { name: 'Email', url: 'mailto:islamrasmiy@gmail.com', icon: '✉️', color: 'bg-gray-600', hover: 'hover:bg-gray-700' },
+];
+
+// ============================================================
 // TARJIMALAR
 // ============================================================
 const translations = {
   en: {
-    topContact: "Contact via WhatsApp",
     brand: "Lingo",
-    nav: { home: "Home", about: "About Us", services: "Services", courses: "Courses", articles: "Articles", contact: "Contact Us" },
+    topContact: "Contact via WhatsApp",
+    nav: { home: "Home", about: "About Us", services: "Services", courses: "Courses", contact: "Contact Us" },
     hero: {
       title1: "Learn Languages",
       title2: "Live Better",
@@ -139,67 +143,29 @@ const translations = {
     },
     pricing: {
       title: "Pricing Structure & Levels",
-      beginner: {
-        title: "Beginner Level",
-        price: "From 95 AED /hour",
-        features: [
-          "Basic vocabulary and essential grammar foundations",
-          "Simple conversations for daily situations",
-          "Guided listening and pronunciation practice",
-          "Interactive exercises and real-life scenarios"
-        ]
-      },
-      intermediate: {
-        title: "Intermediate Level",
-        price: "From 95 AED /hour",
-        features: [
-          "Expanded vocabulary and structured communication",
-          "Discussion-based live sessions and role plays",
-          "Reading and listening to real-world content",
-          "Writing tasks and opinion expression practice"
-        ]
-      },
-      advanced: {
-        title: "Advanced Level",
-        price: "From 95 AED /hour",
-        features: [
-          "Advanced fluency and professional communication",
-          "Debates, presentations, and critical discussions",
-          "Complex text analysis and media interpretation",
-          "Refined writing skills and academic-style practice"
-        ]
-      }
+      beginner: { title: "Beginner Level", price: "From $25 /hour", features: ["Basic vocabulary foundations", "Simple conversations", "Guided pronunciation"] },
+      intermediate: { title: "Intermediate Level", price: "From $30 /hour", features: ["Expanded vocabulary", "Discussion-based sessions", "Real-world content"] },
+      advanced: { title: "Advanced Level", price: "From $35 /hour", features: ["Advanced fluency", "Debates & presentations", "Complex text analysis"] }
     },
     about: {
       title: "About Us",
       subtitle: "Learn & Practice with Professionals",
       desc: "We are more than a language platform — we are a learning experience. Our programs are carefully designed to develop the four essential language skills: listening, reading, writing, and speaking.",
-      beliefs: [
-        "Practical, not theoretical",
-        "Flexible, not restrictive",
-        "Affordable, not overwhelming"
-      ],
+      beliefs: ["Practical, not theoretical", "Flexible, not restrictive", "Affordable, not overwhelming"],
       trial: "That's why we offer a free trial to assess the level, needs, and the preferred instructing method that suits the learner",
       btn: "Explore Languages →"
     },
     vision: {
       title: "Our Vision",
-      desc: "To build the most trusted language education ecosystem in the UAE and beyond, where success enables us to support underprivileged students striving to learn despite financial barriers through the profit that is generated from this company."
+      desc: "To build the most trusted language education ecosystem in the world, where success enables us to support underprivileged students striving to learn despite financial barriers."
     },
     mission: {
       title: "Our Mission",
-      desc: "To make language learning accessible, affordable, and highly effective for learners across the UAE by delivering accurate, learner-centered approaches and assisted learning with qualified instructors — offering maximum flexibility to fit each learner's schedule, goals, and interests and to empower learners of all ages by delivering live, instructor-led language education that builds real-world communication skills through practical, structured learning."
+      desc: "To make language learning accessible, affordable, and highly effective for learners worldwide by delivering accurate, learner-centered approaches and assisted learning with qualified instructors."
     },
     instructors: {
       title: "Our Instructors",
-      subtitle: "Master the Language with Expert Instructors",
-      desc: "At Lingo, our instructors are more than teachers — they are mentors who guide, support, and motivate. Each member of our team is carefully selected based on academic qualifications, real classroom experience, and the ability to connect with learners from different cultures and backgrounds.",
-      qualities: [
-        "Proven instructing expertise",
-        "Clear and engaging communication",
-        "Student-centered learning approach",
-        "Cultural awareness and international experience"
-      ]
+      desc: "At Lingo, our instructors are more than teachers — they are mentors who guide, support, and motivate. Each member of our team is carefully selected based on academic qualifications, real classroom experience, and the ability to connect with learners from different cultures and backgrounds."
     },
     contactPage: {
       title: "Start Your Language Journey with Us",
@@ -212,38 +178,33 @@ const translations = {
       email: "Email Address",
       phoneLabel: "Phone / WhatsApp",
       course: "Language of Interest",
-      model: "Preferred Learning Model",
       message: "Message / Questions",
       btn: "Get in Touch →",
       educatorTitle: "Join Our Team of Expert Educators",
       educatorDesc: "We're looking for passionate language instructors to join Lingo. If you're qualified, experienced, and love instructing — we want to hear from you.",
-      educatorBenefits: [
-        "Flexible instructing hours to fit your schedule",
-        "Competitive pay and performance bonuses",
-        "International student community across the world"
-      ],
+      educatorBenefits: ["Flexible instructing hours", "Competitive pay", "International community"],
       applyName: "Name",
       applyPhone: "Phone",
       applyEmail: "Email",
       applyLanguage: "Language You Teach",
       applyExperience: "Years of Experience",
       applyCert: "Certifications",
-      applyLocation: "Location / City",
-      applyHours: "Preferred Teaching Hours",
+      applyLocation: "Location",
+      applyHours: "Preferred Hours",
       applyBtn: "Apply Now"
     },
     faq: {
       title: "Frequently Asked Questions",
       qs: [
         { q: "Are your classes online or in person?", a: "All our courses are 100% online, allowing you to learn from anywhere with flexible scheduling." },
-        { q: "Who are the instructors?", a: "We have over 10 years of experience teaching languages. Our instructors are native speakers with professional teaching certifications." },
-        { q: "How long does it take to learn a language?", a: "Our courses are designed to help you achieve conversational fluency in just 3 to 6 months with consistent practice." },
-        { q: "Are online courses effective compared to in-person learning?", a: "Yes, online courses offer flexibility and convenience while maintaining high-quality instruction and interaction." },
+        { q: "Who are the instructors?", a: "Our instructors are native speakers with professional teaching certifications and over 10 years of experience." },
+        { q: "How long does it take to learn a language?", a: "With consistent practice, you can achieve conversational fluency in 3 to 6 months." },
+        { q: "Are online courses effective?", a: "Yes, online courses offer flexibility and convenience while maintaining high-quality instruction." },
         { q: "How flexible are the schedules?", a: "We offer morning, evening, and weekend classes to fit your busy lifestyle." },
         { q: "Is there a trial class?", a: "Yes, we offer a free trial class so you can experience our teaching style before committing." },
         { q: "Do you offer certificates?", a: "Yes, we provide certificates of completion for all our courses." },
-        { q: "What levels do you teach?", a: "We teach all levels from beginner to advanced, with courses tailored to your specific needs." },
-        { q: "Can I switch between group and private classes?", a: "Yes, you can switch at any time based on your learning preferences and progress." }
+        { q: "What levels do you teach?", a: "We teach all levels from beginner to advanced, with courses tailored to your needs." },
+        { q: "Can I switch between group and private classes?", a: "Yes, you can switch at any time based on your learning preferences." }
       ]
     },
     footer: {
@@ -255,9 +216,9 @@ const translations = {
     }
   },
   ar: {
-    topContact: "تواصل معنا عبر الواتساب",
     brand: "لينجو",
-    nav: { home: "الرئيسية", about: "من نحن", services: "الخدمات", courses: "الدورات", articles: "المقالات", contact: "تواصل معنا" },
+    topContact: "تواصل معنا عبر الواتساب",
+    nav: { home: "الرئيسية", about: "من نحن", services: "الخدمات", courses: "الدورات", contact: "تواصل معنا" },
     hero: {
       title1: "تعلم اللغات",
       title2: "عيش حياة أفضل",
@@ -284,7 +245,7 @@ const translations = {
     },
     approach: {
       title: "نهجنا",
-      desc: "يجمع منهجنا بين الصرامة الأكاديمية التقليدية وتقنيات الانغماس الحديثة، مما يضمن لك ليس فقط التحدث ولكن أيضًا فهم السياق الثقافي. ابدأ مع مدرسين يتحدثون لغتك، وتقدم إلى متحدثين أصليين، باستخدام منهجيات تدريس لغوية حديثة ومحدثة باستمرار.",
+      desc: "يجمع منهجنا بين الصرامة الأكاديمية التقليدية وتقنيات الانغماس الحديثة، مما يضمن لك ليس فقط التحدث ولكن أيضًا فهم السياق الثقافي.",
       btn: "ابدأ اليوم",
       items: [
         { title: "منهج منظم", desc: "إتقان القواعد والمفردات خطوة بخطوة وفقًا لمعايير CEFR." },
@@ -298,71 +259,33 @@ const translations = {
     },
     pricing: {
       title: "هيكل التسعير والمستويات",
-      beginner: {
-        title: "مستوى مبتدئ",
-        price: "من ٩٥ درهم / ساعة",
-        features: [
-          "المفردات الأساسية وأسس القواعد الأساسية",
-          "محادثات بسيطة للمواقف اليومية",
-          "تمارين استماع ونطق موجهة",
-          "تمارين تفاعلية وسيناريوهات واقعية"
-        ]
-      },
-      intermediate: {
-        title: "مستوى متوسط",
-        price: "من ٩٥ درهم / ساعة",
-        features: [
-          "مفردات موسعة وتواصل منظم",
-          "جلسات مباشرة قائمة على المناقشة ولعب الأدوار",
-          "قراءة واستماع لمحتوى واقعي",
-          "مهام كتابية وممارسة التعبير عن الرأي"
-        ]
-      },
-      advanced: {
-        title: "مستوى متقدم",
-        price: "من ٩٥ درهم / ساعة",
-        features: [
-          "طلاقة متقدمة وتواصل احترافي",
-          "مناظرات وعروض تقديمية ومناقشات نقدية",
-          "تحليل نصوص معقدة وتفسير وسائل الإعلام",
-          "مهارات كتابية متقنة وممارسة أكاديمية"
-        ]
-      }
+      beginner: { title: "مستوى مبتدئ", price: "من ٢٥ دولار / ساعة", features: ["أساسيات المفردات", "محادثات بسيطة", "نطق موجه"] },
+      intermediate: { title: "مستوى متوسط", price: "من ٣٠ دولار / ساعة", features: ["مفردات موسعة", "جلسات نقاش", "محتوى واقعي"] },
+      advanced: { title: "مستوى متقدم", price: "من ٣٥ دولار / ساعة", features: ["طلاقة متقدمة", "مناظرات", "تحليل نصوص"] }
     },
     about: {
       title: "من نحن",
       subtitle: "تعلم وتمرن مع المحترفين",
-      desc: "نحن أكثر من مجرد منصة لغوية — نحن تجربة تعليمية. تم تصميم برامجنا بعناية لتطوير المهارات اللغوية الأربع الأساسية: الاستماع والقراءة والكتابة والتحدث.",
-      beliefs: [
-        "عملي، ليس نظريًا",
-        "مرن، ليس مقيدًا",
-        "بأسعار معقولة، ليس مرهقًا"
-      ],
-      trial: "لهذا نقدم درسًا تجريبيًا مجانيًا لتقييم المستوى والاحتياجات وطريقة التدريس المناسبة للمتعلم",
+      desc: "نحن أكثر من مجرد منصة لغوية — نحن تجربة تعليمية. تم تصميم برامجنا بعناية لتطوير المهارات اللغوية الأربع الأساسية.",
+      beliefs: ["عملي، ليس نظريًا", "مرن، ليس مقيدًا", "بأسعار معقولة"],
+      trial: "لهذا نقدم درسًا تجريبيًا مجانيًا لتقييم المستوى والاحتياجات",
       btn: "استكشف اللغات ←"
     },
     vision: {
       title: "رؤيتنا",
-      desc: "بناء نظام بيئي موثوق لتعليم اللغات في الإمارات وخارجها، حيث يمكننا من خلال الأرباح دعم الطلاب المحرومين الذين يسعون للتعلم رغم العوائق المالية."
+      desc: "بناء نظام بيئي موثوق لتعليم اللغات في العالم، حيث يمكننا من خلال الأرباح دعم الطلاب المحرومين."
     },
     mission: {
       title: "مهمتنا",
-      desc: "جعل تعلم اللغات متاحًا وبأسعار معقولة وفعال للغاية للمتعلمين في جميع أنحاء الإمارات من خلال تقديم مناهج دقيقة تركز على المتعلم، وتعليم مدعوم بمدربين مؤهلين — مع أقصى درجات المرونة."
+      desc: "جعل تعلم اللغات متاحًا وبأسعار معقولة وفعال للمتعلمين في جميع أنحاء العالم من خلال تقديم مناهج دقيقة تركز على المتعلم."
     },
     instructors: {
       title: "مدربونا",
-      subtitle: "اتقن اللغة مع مدربين خبراء",
-      desc: "في لينجو، مدربونا هم أكثر من مجرد معلمين — إنهم مرشدون يوجهون ويدعمون ويحفزون. يتم اختيار كل عضو في فريقنا بعناية بناءً على المؤهلات الأكاديمية والخبرة الصفية الحقيقية والقدرة على التواصل مع المتعلمين من ثقافات وخلفيات مختلفة.",
-      qualities: [
-        "خبرة تدريس مثبتة",
-        "تواصل واضح وجذاب",
-        "نهج تعليمي يركز على الطالب",
-        "وعي ثقافي وخبرة دولية"
-      ]
+      desc: "في لينجو، مدربونا هم أكثر من مجرد معلمين — إنهم مرشدون يوجهون ويدعمون ويحفزون. يتم اختيار كل عضو في فريقنا بعناية."
     },
     contactPage: {
       title: "ابدأ رحلتك اللغوية معنا",
-      desc: "تواصل معنا اليوم لمناقشة أهدافك التعليمية. اتصل بنا أو راسلنا عبر البريد الإلكتروني أو املأ النموذج.",
+      desc: "تواصل معنا اليوم لمناقشة أهدافك التعليمية.",
       address: "قيرغيزستان",
       phone: "+996 553 720 108",
       email: "islamrasmiy@gmail.com",
@@ -371,38 +294,33 @@ const translations = {
       email: "البريد الإلكتروني",
       phoneLabel: "الهاتف / واتساب",
       course: "اللغة المطلوبة",
-      model: "نموذج التعلم المفضل",
       message: "الرسالة / الأسئلة",
       btn: "تواصل معنا ←",
       educatorTitle: "انضم إلى فريق المدربين الخبراء لدينا",
-      educatorDesc: "نحن نبحث عن مدربي لغات شغوفين للانضمام إلى لينجو. إذا كنت مؤهلاً وذو خبرة وتحب التدريس — نريد أن نسمع منك.",
-      educatorBenefits: [
-        "ساعات تدريس مرنة تناسب جدولك",
-        "أجور تنافسية ومكافآت أداء",
-        "مجتمع طلابي دولي في جميع أنحاء العالم"
-      ],
+      educatorDesc: "نحن نبحث عن مدربي لغات شغوفين للانضمام إلى لينجو.",
+      educatorBenefits: ["ساعات مرنة", "أجور تنافسية", "مجتمع دولي"],
       applyName: "الاسم",
       applyPhone: "الهاتف",
       applyEmail: "البريد الإلكتروني",
       applyLanguage: "اللغة التي تدرسها",
       applyExperience: "سنوات الخبرة",
       applyCert: "الشهادات",
-      applyLocation: "الموقع / المدينة",
-      applyHours: "ساعات التدريس المفضلة",
+      applyLocation: "الموقع",
+      applyHours: "الساعات المفضلة",
       applyBtn: "قدم الآن"
     },
     faq: {
       title: "الأسئلة الشائعة",
       qs: [
         { q: "هل دوراتكم عبر الإنترنت أم حضورية؟", a: "جميع دوراتنا ١٠٠٪ عبر الإنترنت، مما يتيح لك التعلم من أي مكان بجدول مرن." },
-        { q: "من هم المدربون؟", a: "لدينا أكثر من ١٠ سنوات من الخبرة في تدريس اللغات. مدربونا هم متحدثون أصليون مع شهادات تدريس مهنية." },
-        { q: "كم يستغرق تعلم اللغة؟", a: "تم تصميم دوراتنا لمساعدتك على تحقيق الطلاقة المحادثة في غضون ٣ إلى ٦ أشهر مع الممارسة المستمرة." },
-        { q: "هل الدورات عبر الإنترنت فعالة مقارنة بالتعلم الحضوري؟", a: "نعم، تقدم الدورات عبر الإنترنت المرونة والراحة مع الحفاظ على جودة تعليمية عالية." },
-        { q: "ما مدى مرونة الجداول؟", a: "نقدم دروسًا صباحية ومسائية وعطلة نهاية الأسبوع لتناسب نمط حياتك المزدحم." },
-        { q: "هل هناك درس تجريبي؟", a: "نعم، نقدم درسًا تجريبيًا مجانيًا لتجربة أسلوب التدريس لدينا قبل الالتزام." },
+        { q: "من هم المدربون؟", a: "مدربونا هم متحدثون أصليون مع شهادات تدريس مهنية." },
+        { q: "كم يستغرق تعلم اللغة؟", a: "مع الممارسة المستمرة، يمكنك تحقيق الطلاقة في غضون ٣ إلى ٦ أشهر." },
+        { q: "هل الدورات عبر الإنترنت فعالة؟", a: "نعم، تقدم الدورات عبر الإنترنت المرونة والراحة مع الحفاظ على جودة عالية." },
+        { q: "ما مدى مرونة الجداول؟", a: "نقدم دروسًا صباحية ومسائية وعطلة نهاية الأسبوع." },
+        { q: "هل هناك درس تجريبي؟", a: "نعم، نقدم درسًا تجريبيًا مجانيًا." },
         { q: "هل تقدمون شهادات؟", a: "نعم، نقدم شهادات إتمام لجميع دوراتنا." },
-        { q: "ما المستويات التي تدرسونها؟", a: "نحن ندرس جميع المستويات من المبتدئ إلى المتقدم، مع دورات مصممة خصيصًا لاحتياجاتك." },
-        { q: "هل يمكنني التبديل بين الدروس الجماعية والخاصة؟", a: "نعم، يمكنك التبديل في أي وقت بناءً على تفضيلات التعلم والتقدم." }
+        { q: "ما المستويات التي تدرسونها؟", a: "نحن ندرس جميع المستويات من المبتدئ إلى المتقدم." },
+        { q: "هل يمكنني التبديل بين الدروس الجماعية والخاصة؟", a: "نعم، يمكنك التبديل في أي وقت." }
       ]
     },
     footer: {
@@ -465,28 +383,14 @@ function AdminPanel({ onBack }) {
             <h1 className="text-2xl font-bold text-amber-500">Lingo Admin Panel</h1>
             <p className="text-xs text-slate-400">Real-Time Firebase Submissions</p>
           </div>
-          <button onClick={onBack} className="mt-3 md:mt-0 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm border border-slate-700 transition">
-            ← Back to Site
-          </button>
+          <button onClick={onBack} className="mt-3 md:mt-0 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm border border-slate-700 transition">← Back to Site</button>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-6">
-          <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
-            <p className="text-xs text-slate-400">Total</p>
-            <p className="text-2xl font-bold text-white">{stats.total}</p>
-          </div>
-          <div className="bg-slate-800 rounded-xl p-4 border border-red-500/30">
-            <p className="text-xs text-slate-400">New</p>
-            <p className="text-2xl font-bold text-red-400">{stats.new}</p>
-          </div>
-          <div className="bg-slate-800 rounded-xl p-4 border border-yellow-500/30">
-            <p className="text-xs text-slate-400">Contacted</p>
-            <p className="text-2xl font-bold text-yellow-400">{stats.contacted}</p>
-          </div>
-          <div className="bg-slate-800 rounded-xl p-4 border border-green-500/30">
-            <p className="text-xs text-slate-400">Accepted</p>
-            <p className="text-2xl font-bold text-green-400">{stats.accepted}</p>
-          </div>
+          <div className="bg-slate-800 rounded-xl p-4 border border-slate-700"><p className="text-xs text-slate-400">Total</p><p className="text-2xl font-bold text-white">{stats.total}</p></div>
+          <div className="bg-slate-800 rounded-xl p-4 border border-red-500/30"><p className="text-xs text-slate-400">New</p><p className="text-2xl font-bold text-red-400">{stats.new}</p></div>
+          <div className="bg-slate-800 rounded-xl p-4 border border-yellow-500/30"><p className="text-xs text-slate-400">Contacted</p><p className="text-2xl font-bold text-yellow-400">{stats.contacted}</p></div>
+          <div className="bg-slate-800 rounded-xl p-4 border border-green-500/30"><p className="text-xs text-slate-400">Accepted</p><p className="text-2xl font-bold text-green-400">{stats.accepted}</p></div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 my-4">
@@ -496,26 +400,14 @@ function AdminPanel({ onBack }) {
             <option value="Bog'lanildi">Contacted</option>
             <option value="Qabul qilindi">Accepted</option>
           </select>
-          <input type="text" placeholder="Search (name, phone, course)..." value={search} onChange={(e) => setSearch(e.target.value)} className="bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500 flex-1" />
+          <input type="text" placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)} className="bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500 flex-1" />
         </div>
 
         <div className="overflow-x-auto bg-slate-800 rounded-xl border border-slate-700">
-          {loading ? (
-            <div className="p-8 text-center text-slate-400">Loading...</div>
-          ) : filteredData.length === 0 ? (
-            <div className="p-8 text-center text-slate-400">No applications found</div>
-          ) : (
+          {loading ? <div className="p-8 text-center text-slate-400">Loading...</div> : filteredData.length === 0 ? <div className="p-8 text-center text-slate-400">No applications found</div> : (
             <table className="w-full text-left text-sm text-slate-300">
               <thead className="bg-slate-900/80 text-xs uppercase text-slate-400 border-b border-slate-700">
-                <tr>
-                  <th className="p-4">#</th>
-                  <th className="p-4">Name</th>
-                  <th className="p-4">Email</th>
-                  <th className="p-4">Phone</th>
-                  <th className="p-4">Course</th>
-                  <th className="p-4">Status</th>
-                  <th className="p-4 text-center">Action</th>
-                </tr>
+                <tr><th className="p-4">#</th><th className="p-4">Name</th><th className="p-4">Email</th><th className="p-4">Phone</th><th className="p-4">Course</th><th className="p-4">Status</th><th className="p-4 text-center">Action</th></tr>
               </thead>
               <tbody className="divide-y divide-slate-700">
                 {filteredData.map((item, idx) => (
@@ -545,47 +437,6 @@ function AdminPanel({ onBack }) {
     </div>
   );
 }
-
-// ============================================================
-// SOCIAL ICONS
-// ============================================================
-const SOCIAL_LINKS = {
-  youtube: { 
-    name: 'YouTube', 
-    url: 'https://www.youtube.com/@islamicummah571', 
-    icon: '▶️',
-    bg: 'bg-red-600',
-    hover: 'hover:bg-red-700'
-  },
-  telegram: { 
-    name: 'Telegram', 
-    url: 'https://t.me/lingoplatform', 
-    icon: '✈️',
-    bg: 'bg-blue-600',
-    hover: 'hover:bg-blue-700'
-  },
-  instagram: { 
-    name: 'Instagram', 
-    url: 'https://www.instagram.com/lingo_platform', 
-    icon: '📸',
-    bg: 'bg-pink-600',
-    hover: 'hover:bg-pink-700'
-  },
-  whatsapp: { 
-    name: 'WhatsApp', 
-    url: 'https://wa.me/996553720108', 
-    icon: '💬',
-    bg: 'bg-green-600',
-    hover: 'hover:bg-green-700'
-  },
-  email: { 
-    name: 'Email', 
-    url: 'mailto:islamrasmiy@gmail.com', 
-    icon: '✉️',
-    bg: 'bg-gray-600',
-    hover: 'hover:bg-gray-700'
-  }
-};
 
 // ============================================================
 // MAIN APP
@@ -682,15 +533,13 @@ export default function App() {
           <div className="bg-white rounded-3xl max-w-2xl w-full p-6 md:p-8 relative shadow-2xl flex flex-col md:flex-row items-center gap-6">
             <button onClick={() => setShowPromoModal(false)} className="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-xl font-bold bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition hover:bg-slate-200">×</button>
             <div className="w-full md:w-1/2 h-56 md:h-64 rounded-2xl overflow-hidden bg-slate-100 border">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" alt="Lingo Offer" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" alt="Offer" className="w-full h-full object-cover" />
             </div>
             <div className="w-full md:w-1/2 space-y-3">
-              <span className="text-[10px] font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-full uppercase tracking-wider">Exclusive Launch Offer</span>
+              <span className="text-[10px] font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-full uppercase tracking-wider">Exclusive Offer</span>
               <h3 className="text-xl font-extrabold text-[#0A1128] leading-tight">Get 50% OFF your first month</h3>
-              <p className="text-xs text-slate-500 leading-relaxed">Limited to the FIRST 10 customers only. Book between the 1st – 3rd of each month!</p>
-              <button onClick={() => { setShowPromoModal(false); setCurrentPage('contact'); }} className="w-full bg-[#0A1128] hover:bg-orange-600 text-white font-bold py-3 rounded-xl transition text-sm shadow-md">
-                Book Now →
-              </button>
+              <p className="text-xs text-slate-500">Limited to the FIRST 10 customers only!</p>
+              <button onClick={() => { setShowPromoModal(false); setCurrentPage('contact'); }} className="w-full bg-[#0A1128] hover:bg-orange-600 text-white font-bold py-3 rounded-xl transition text-sm">Book Now →</button>
             </div>
           </div>
         </div>
@@ -700,13 +549,18 @@ export default function App() {
       <header className="bg-[#FFF0E5] text-slate-700 text-xs py-2 px-4 md:px-8 flex flex-wrap justify-between items-center border-b border-orange-100 gap-2">
         <div className="flex flex-wrap items-center gap-3 md:gap-6 font-medium">
           <a href="mailto:islamrasmiy@gmail.com" className="hover:text-orange-600 transition flex items-center gap-1">
-            ✉️ <span className="hidden sm:inline">islamrasmiy@gmail.com</span>
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span className="hidden sm:inline">islamrasmiy@gmail.com</span>
           </a>
           <a href="https://wa.me/996553720108" target="_blank" rel="noreferrer" className="hover:text-green-600 transition flex items-center gap-1 font-bold text-green-700">
-            💬 <span className="hidden sm:inline">+996 553 720 108</span>
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span className="hidden sm:inline">+996 553 720 108</span>
           </a>
         </div>
-        <button onClick={() => setCurrentPage('admin')} className="text-slate-500 hover:text-orange-600 font-semibold text-xs transition">🔑 Admin</button>
+        <button onClick={() => setCurrentPage('admin')} className="text-slate-500 hover:text-orange-600 font-semibold text-xs transition flex items-center gap-1">
+          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 13c-2.33 0-4.31-1.46-5.11-3.5.1-.56 1.14-1.5 2.11-1.5.47 0 .89.19 1.22.52.32.33.74.52 1.22.52h1.12c.47 0 .89-.19 1.22-.52.32-.33.74-.52 1.22-.52.97 0 2.01.94 2.11 1.5C16.31 17.54 14.33 19 12 19z"/></svg>
+          Admin
+        </button>
       </header>
 
       {/* NAVBAR */}
@@ -756,26 +610,11 @@ export default function App() {
       {currentPage === 'courses' ? (
         <CoursesPage t={t} handleSelectLanguage={handleSelectLanguage} ALL_LANGUAGES={ALL_LANGUAGES} />
       ) : currentPage === 'contact' ? (
-        <ContactPage 
-          t={t} 
-          formData={formData} 
-          setFormData={setFormData} 
-          educatorForm={educatorForm} 
-          setEducatorForm={setEducatorForm} 
-          selectedCourse={selectedCourse} 
-          setSelectedCourse={setSelectedCourse} 
-          selectedModel={selectedModel} 
-          setSelectedModel={setSelectedModel} 
-          submitting={submitting} 
-          handleFormSubmit={handleFormSubmit} 
-          handleEducatorSubmit={handleEducatorSubmit} 
-          ALL_LANGUAGES={ALL_LANGUAGES}
-          SOCIAL_LINKS={SOCIAL_LINKS}
-        />
+        <ContactPage t={t} formData={formData} setFormData={setFormData} educatorForm={educatorForm} setEducatorForm={setEducatorForm} selectedCourse={selectedCourse} setSelectedCourse={setSelectedCourse} selectedModel={selectedModel} setSelectedModel={setSelectedModel} submitting={submitting} handleFormSubmit={handleFormSubmit} handleEducatorSubmit={handleEducatorSubmit} ALL_LANGUAGES={ALL_LANGUAGES} SOCIAL_LINKS={SOCIAL_LINKS} />
       ) : currentPage === 'about' ? (
         <AboutPage t={t} />
       ) : currentPage === 'services' ? (
-        <ServicesPage t={t} handleSelectLanguage={handleSelectLanguage} />
+        <ServicesPage t={t} />
       ) : (
         <HomePage t={t} slide={slide} handleSelectLanguage={handleSelectLanguage} ALL_LANGUAGES={ALL_LANGUAGES} INSTRUCTORS={INSTRUCTORS} SOCIAL_LINKS={SOCIAL_LINKS} />
       )}
@@ -804,10 +643,10 @@ function HomePage({ t, slide, handleSelectLanguage, ALL_LANGUAGES, INSTRUCTORS, 
           
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <button onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#0A1128] hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-full transition shadow-lg text-sm">{t.hero.btnStart}</button>
-            <button onClick={() => { window.location.hash = 'courses'; }} className="border border-slate-300 hover:bg-slate-100 text-[#0A1128] font-semibold px-6 py-3 rounded-full transition text-sm">{t.hero.btnExplore}</button>
+            <button onClick={() => { setCurrentPage('courses'); }} className="border border-slate-300 hover:bg-slate-100 text-[#0A1128] font-semibold px-6 py-3 rounded-full transition text-sm">{t.hero.btnExplore}</button>
           </div>
 
-          <div className="flex flex-wrap gap-4 text-xs font-bold text-slate-700">
+          <div className="flex flex-wrap gap-3 text-xs font-bold text-slate-700">
             <span className="bg-[#FFF0E5] px-4 py-2 rounded-full border border-orange-200">🌍 {t.stats.languages}</span>
             <span className="bg-[#FFF0E5] px-4 py-2 rounded-full border border-orange-200">👨‍🏫 {t.stats.instructors}</span>
             <span className="bg-[#FFF0E5] px-4 py-2 rounded-full border border-orange-200">📚 {t.stats.classes}</span>
@@ -862,20 +701,18 @@ function HomePage({ t, slide, handleSelectLanguage, ALL_LANGUAGES, INSTRUCTORS, 
         </div>
       </section>
 
-      {/* APPROACH / METHOD - SKRINSHOTDAGI KABI */}
+      {/* APPROACH */}
       <ApproachSection t={t} />
 
       {/* INSTRUCTORS */}
       <section className="bg-[#0A1128] text-white py-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-extrabold">{t.instructors.title}</h2>
-            <p className="text-slate-400 text-sm max-w-2xl mx-auto mt-2">{t.instructors.desc}</p>
-          </div>
+          <h2 className="text-3xl font-extrabold text-center mb-4">{t.instructors.title}</h2>
+          <p className="text-slate-400 text-sm text-center max-w-2xl mx-auto mb-10">{t.instructors.desc}</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {INSTRUCTORS.map((inst, i) => (
               <div key={i} className="bg-slate-800 rounded-xl p-4 text-center hover:scale-105 transition hover:shadow-xl">
-                <img src={inst.img} alt={inst.name} className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-amber-500" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 mx-auto flex items-center justify-center text-2xl font-bold text-white">{inst.name[0]}</div>
                 <h4 className="font-bold text-sm mt-3">{inst.name}</h4>
                 <p className="text-[10px] text-amber-400">{inst.role}</p>
                 <span className="text-xl">{inst.flag}</span>
@@ -889,20 +726,15 @@ function HomePage({ t, slide, handleSelectLanguage, ALL_LANGUAGES, INSTRUCTORS, 
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-16">
         <h2 className="text-3xl font-extrabold text-[#0A1128] text-center mb-10">{t.pricing.title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { key: 'beginner', color: 'border-blue-200', bg: 'bg-blue-50' },
-            { key: 'intermediate', color: 'border-amber-200', bg: 'bg-amber-50' },
-            { key: 'advanced', color: 'border-green-200', bg: 'bg-green-50' }
-          ].map((p, idx) => {
-            const level = t.pricing[p.key];
+          {['beginner', 'intermediate', 'advanced'].map((key, idx) => {
+            const level = t.pricing[key];
+            const colors = ['border-blue-200 bg-blue-50', 'border-amber-200 bg-amber-50', 'border-green-200 bg-green-50'];
             return (
-              <div key={idx} className={`bg-white p-6 rounded-2xl border-2 ${p.color} shadow-md hover:shadow-xl transition`}>
+              <div key={idx} className={`bg-white p-6 rounded-2xl border-2 ${colors[idx]} shadow-md hover:shadow-xl transition`}>
                 <h3 className="text-xl font-bold text-[#0A1128]">{level.title}</h3>
                 <p className="text-sm font-bold text-orange-600 mt-1">{level.price}</p>
                 <ul className="mt-4 space-y-2 text-xs text-slate-600">
-                  {level.features.map((f, i) => (
-                    <li key={i} className="flex items-start gap-2">✓ {f}</li>
-                  ))}
+                  {level.features.map((f, i) => <li key={i} className="flex items-start gap-2">✓ {f}</li>)}
                 </ul>
                 <button onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })} className="mt-6 w-full bg-[#0A1128] hover:bg-orange-600 text-white font-bold py-2 rounded-full transition text-sm">Choose Plan</button>
               </div>
@@ -928,61 +760,35 @@ function HomePage({ t, slide, handleSelectLanguage, ALL_LANGUAGES, INSTRUCTORS, 
 }
 
 // ============================================================
-// APPROACH SECTION (SKRINSHOTDAGI KABI)
+// APPROACH SECTION
 // ============================================================
 function ApproachSection({ t }) {
+  const icons = ['📚', '🌍', '💰', '💬'];
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-8 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Chap tomon - Our Approach */}
         <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg">
           <h2 className="text-3xl font-extrabold text-[#0A1128] mb-4">{t.approach.title}</h2>
-          <p className="text-slate-600 text-sm leading-relaxed mb-6">
-            {t.approach.desc}
-          </p>
-          <button 
-            onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })} 
-            className="bg-[#0A1128] hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition shadow-lg text-sm"
-          >
-            {t.approach.btn}
-          </button>
+          <p className="text-slate-600 text-sm leading-relaxed mb-6">{t.approach.desc}</p>
+          <button onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#0A1128] hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition shadow-lg text-sm">{t.approach.btn}</button>
         </div>
-
-        {/* O'ng tomon - 4 ta kartochka */}
         <div className="grid grid-cols-2 gap-4">
-          {t.approach.items.map((item, i) => {
-            const icons = ['📚', '🌍', '💰', '💬'];
-            const colors = ['blue', 'amber', 'green', 'purple'];
-            return (
-              <div key={i} className={`bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:-translate-y-1`}>
-                <div className={`w-12 h-12 rounded-2xl bg-${colors[i]}-100 text-${colors[i]}-600 flex items-center justify-center text-xl font-bold mb-3`}>
-                  {icons[i]}
-                </div>
-                <h4 className="font-bold text-[#0A1128] text-sm mb-1">{item.title}</h4>
-                <p className="text-[10px] text-slate-500 leading-relaxed">{item.desc}</p>
-              </div>
-            );
-          })}
+          {t.approach.items.map((item, i) => (
+            <div key={i} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:-translate-y-1">
+              <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl font-bold mb-3">{icons[i]}</div>
+              <h4 className="font-bold text-[#0A1128] text-sm mb-1">{item.title}</h4>
+              <p className="text-[10px] text-slate-500 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* 200+ Happy Students */}
       <div className="mt-8 text-center">
-        <span className="text-sm font-bold text-orange-600 bg-orange-100 px-8 py-3 rounded-full shadow-sm inline-flex items-center gap-2">
-          ⭐ {t.approach.students}
-        </span>
+        <span className="text-sm font-bold text-orange-600 bg-orange-100 px-8 py-3 rounded-full shadow-sm inline-flex items-center gap-2">⭐ {t.approach.students}</span>
       </div>
-
-      {/* Master Any Language, Anywhere */}
       <div className="mt-12 text-center bg-[#0A1128] text-white p-10 rounded-3xl">
         <h3 className="text-2xl md:text-3xl font-extrabold">{t.approach.masterTitle}</h3>
         <p className="text-sm text-slate-400 mt-2 max-w-xl mx-auto">{t.approach.masterDesc}</p>
-        <button 
-          onClick={() => window.location.hash = 'courses'} 
-          className="mt-4 bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-3 rounded-full transition text-sm shadow-lg"
-        >
-          Start Your Journey →
-        </button>
+        <button onClick={() => setCurrentPage('courses')} className="mt-4 bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-3 rounded-full transition text-sm shadow-lg">Start Your Journey →</button>
       </div>
     </section>
   );
@@ -998,18 +804,14 @@ function AboutPage({ t }) {
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#0A1128]">{t.about.title}</h1>
         <p className="text-orange-600 font-semibold text-sm mt-2">{t.about.subtitle}</p>
       </div>
-
       <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
         <p className="text-slate-700 leading-relaxed">{t.about.desc}</p>
         <ul className="space-y-2 text-sm">
-          {t.about.beliefs.map((b, i) => (
-            <li key={i} className="flex items-center gap-3">✅ <span>{b}</span></li>
-          ))}
+          {t.about.beliefs.map((b, i) => <li key={i} className="flex items-center gap-3">✅ <span>{b}</span></li>)}
         </ul>
         <p className="text-sm text-orange-600 bg-orange-50 p-4 rounded-xl italic">{t.about.trial}</p>
-        <button onClick={() => window.location.hash = 'courses'} className="bg-[#0A1128] hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-full transition text-sm">{t.about.btn}</button>
+        <button onClick={() => setCurrentPage('courses')} className="bg-[#0A1128] hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-full transition text-sm">{t.about.btn}</button>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         <div className="bg-[#0A1128] text-white p-6 rounded-2xl">
           <h3 className="text-xl font-bold text-amber-400">{t.vision.title}</h3>
@@ -1027,26 +829,23 @@ function AboutPage({ t }) {
 // ============================================================
 // SERVICES PAGE
 // ============================================================
-function ServicesPage({ t, handleSelectLanguage }) {
+function ServicesPage({ t }) {
   const services = [
-    { title: "Live Online Language Courses", desc: "Interactive, instructor-led sessions designed to build strong foundations and practical communication skills." },
-    { title: "Private One-to-One Coaching", desc: "Personalized learning tailored to your level, pace, and specific goals." },
-    { title: "Small Group Interactive Classes", desc: "Learn with peers in an engaging, collaborative environment. Limited seats for focused attention." },
-    { title: "Conversation & Fluency Training", desc: "Practice real-world speaking skills with structured conversation sessions and native-level interaction." },
-    { title: "Professionally Designed Curricula", desc: "Structured programs that develop listening, reading, writing, and speaking in a balanced and progressive way." },
-    { title: "Placement & Level Assessment Tests", desc: "Know exactly where you stand and get placed in the right program from day one." },
-    { title: "Exam Preparation", desc: "IELTS, TOEFL, and PTE preparation programs with expert trainers." },
-    { title: "Corporate & Customized Training", desc: "Custom language solutions for businesses, teams, and organizations." },
-    { title: "Weekly/Monthly Free Group Sessions", desc: "Free group online meetings and courses to practice, connect, and grow your skills together." }
+    { title: "Live Online Language Courses", desc: "Interactive, instructor-led sessions designed to build strong foundations." },
+    { title: "Private One-to-One Coaching", desc: "Personalized learning tailored to your level, pace, and goals." },
+    { title: "Small Group Interactive Classes", desc: "Learn with peers in an engaging, collaborative environment." },
+    { title: "Conversation & Fluency Training", desc: "Practice real-world speaking skills with native-level interaction." },
+    { title: "Professionally Designed Curricula", desc: "Structured programs that develop all language skills." },
+    { title: "Placement & Level Assessment Tests", desc: "Know exactly where you stand from day one." },
+    { title: "Exam Preparation", desc: "IELTS, TOEFL, and PTE preparation programs." },
+    { title: "Corporate & Customized Training", desc: "Custom language solutions for businesses." },
+    { title: "Free Group Sessions", desc: "Free group online meetings to practice and connect." }
   ];
 
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-8 py-16 animate-fadeIn">
-      <div className="text-center mb-12">
-        <span className="text-xs font-bold uppercase tracking-widest text-orange-600">{t.offers.tag}</span>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[#0A1128] mt-2">{t.offers.title}</h1>
-      </div>
-
+      <h1 className="text-4xl md:text-5xl font-extrabold text-[#0A1128] text-center mb-4">{t.offers.title}</h1>
+      <p className="text-slate-600 text-center max-w-2xl mx-auto text-sm mb-10">Our courses are designed to serve learners of all levels, from beginners to advanced speakers.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s, i) => (
           <div key={i} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition hover:-translate-y-1">
@@ -1055,12 +854,6 @@ function ServicesPage({ t, handleSelectLanguage }) {
             <p className="text-xs text-slate-500 leading-relaxed">{s.desc}</p>
           </div>
         ))}
-      </div>
-
-      <div className="mt-12 bg-[#0A1128] text-white p-8 rounded-3xl text-center">
-        <p className="text-2xl font-bold">🎓 50% OFF — Book between the 1st – 3rd of each month!</p>
-        <p className="text-sm text-amber-400 mt-2">Limited to the first 10 customers only</p>
-        <button onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })} className="mt-4 bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-3 rounded-full transition text-sm">Book Now →</button>
       </div>
     </section>
   );
@@ -1073,13 +866,11 @@ function CoursesPage({ t, handleSelectLanguage, ALL_LANGUAGES }) {
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-8 py-12 animate-fadeIn">
       <div className="text-center mb-10">
-        <span className="text-xs font-bold uppercase tracking-widest text-orange-600">{t.brand} Academic Catalog</span>
-        <h1 className="text-3xl md:text-5xl font-extrabold text-[#0A1128] mt-2 mb-3">Explore Our Languages</h1>
-        <p className="text-slate-600 max-w-xl mx-auto text-sm">15+ languages. Expert instructors. Flexible schedules. Start with a few classes.</p>
+        <h1 className="text-3xl md:text-5xl font-extrabold text-[#0A1128] mb-3">Explore Our Languages</h1>
+        <p className="text-slate-600 max-w-xl mx-auto text-sm">15+ languages. Expert instructors. Flexible schedules.</p>
       </div>
-
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-        {ALL_LANGUAGES.slice(0, 20).map((item, idx) => (
+        {ALL_LANGUAGES.map((item, idx) => (
           <div key={idx} onClick={() => handleSelectLanguage(item.name)} className="bg-white border border-slate-200 hover:border-orange-500 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-xl transition cursor-pointer transform hover:-translate-y-1 group">
             <span className="text-4xl md:text-5xl mb-3 transform group-hover:scale-110 transition duration-200">{item.flag}</span>
             <h3 className="font-bold text-sm md:text-base text-[#0A1128]">{item.name}</h3>
@@ -1095,11 +886,7 @@ function CoursesPage({ t, handleSelectLanguage, ALL_LANGUAGES }) {
 // ============================================================
 // CONTACT PAGE
 // ============================================================
-function ContactPage({ 
-  t, formData, setFormData, educatorForm, setEducatorForm, 
-  selectedCourse, setSelectedCourse, selectedModel, setSelectedModel, 
-  submitting, handleFormSubmit, handleEducatorSubmit, ALL_LANGUAGES, SOCIAL_LINKS 
-}) {
+function ContactPage({ t, formData, setFormData, educatorForm, setEducatorForm, selectedCourse, setSelectedCourse, selectedModel, setSelectedModel, submitting, handleFormSubmit, handleEducatorSubmit, ALL_LANGUAGES, SOCIAL_LINKS }) {
   const models = ['Group Classes', 'One-to-One', 'Corporate Program', 'Exam Preparation'];
 
   return (
@@ -1109,8 +896,14 @@ function ContactPage({
         <p className="text-slate-600 max-w-xl mx-auto text-sm">{t.contactPage.desc}</p>
       </div>
 
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+        <div><p className="text-xs text-slate-400">📍 Address</p><p className="font-bold text-sm">{t.contactPage.address}</p></div>
+        <div><p className="text-xs text-slate-400">📞 Phone</p><p className="font-bold text-sm">{t.contactPage.phone}</p></div>
+        <div><p className="text-xs text-slate-400">💬 WhatsApp</p><a href="https://wa.me/996553720108" target="_blank" rel="noreferrer" className="font-bold text-sm text-green-700 hover:underline flex items-center gap-1">Chat Now</a></div>
+        <div><p className="text-xs text-slate-400">✉️ Email</p><a href="mailto:islamrasmiy@gmail.com" className="font-bold text-sm text-orange-600 hover:underline">{t.contactPage.email}</a></div>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Contact Form */}
         <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-xl">
           <h3 className="text-xl font-bold text-[#0A1128] mb-5">{t.contactPage.formTitle}</h3>
           <form onSubmit={handleFormSubmit} className="space-y-4">
@@ -1119,9 +912,7 @@ function ContactPage({
             <input type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} placeholder={t.contactPage.phoneLabel} className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:outline-none text-sm transition" required />
             <select value={selectedCourse} onChange={(e) => setSelectedCourse(e.target.value)} className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:outline-none text-sm bg-white transition">
               <option value="">{t.contactPage.course}</option>
-              {ALL_LANGUAGES.slice(0, 20).map((item, idx) => (
-                <option key={idx} value={item.name}>{item.flag} {item.name}</option>
-              ))}
+              {ALL_LANGUAGES.map((item, idx) => <option key={idx} value={item.name}>{item.flag} {item.name}</option>)}
             </select>
             <select value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)} className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:outline-none text-sm bg-white transition">
               <option value="">{t.contactPage.model}</option>
@@ -1132,14 +923,12 @@ function ContactPage({
           </form>
         </div>
 
-        {/* Educator Form */}
-        <div className="bg-[#0A1128] text-white p-6 md:p-8 rounded-3xl shadow-xl">
+        <div className="bg-[#0A1128] text-white p-6 md:p-8 rounded-3xl shadow-xl flex flex-col justify-center">
           <h3 className="text-xl font-bold text-amber-400 mb-2">{t.contactPage.educatorTitle}</h3>
           <p className="text-sm text-slate-300 mb-4">{t.contactPage.educatorDesc}</p>
           <ul className="space-y-1 text-xs text-slate-300 mb-6">
             {t.contactPage.educatorBenefits.map((b, i) => <li key={i} className="flex items-start gap-2">✓ {b}</li>)}
           </ul>
-
           <form onSubmit={handleEducatorSubmit} className="space-y-3">
             <input type="text" value={educatorForm.name} onChange={(e) => setEducatorForm({ ...educatorForm, name: e.target.value })} placeholder={t.contactPage.applyName} className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm text-white placeholder-slate-500 transition" required />
             <input type="email" value={educatorForm.email} onChange={(e) => setEducatorForm({ ...educatorForm, email: e.target.value })} placeholder={t.contactPage.applyEmail} className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-xl focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm text-white placeholder-slate-500 transition" required />
@@ -1154,33 +943,10 @@ function ContactPage({
         </div>
       </div>
 
-      {/* Contact Info */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-        <div><p className="text-xs text-slate-400">📍 Address</p><p className="font-bold text-sm">{t.contactPage.address}</p></div>
-        <div><p className="text-xs text-slate-400">📞 Phone</p><p className="font-bold text-sm">{t.contactPage.phone}</p></div>
-        <div>
-          <p className="text-xs text-slate-400">💬 WhatsApp</p>
-          <a href="https://wa.me/996553720108" target="_blank" rel="noreferrer" className="font-bold text-sm text-green-700 hover:underline flex items-center gap-1">
-            <span>💬</span> Chat Now
-          </a>
-        </div>
-        <div>
-          <p className="text-xs text-slate-400">✉️ Email</p>
-          <a href="mailto:islamrasmiy@gmail.com" className="font-bold text-sm text-orange-600 hover:underline">{t.contactPage.email}</a>
-        </div>
-      </div>
-
-      {/* Social Links */}
-      <div className="flex flex-wrap gap-3 mt-6 justify-center">
-        {Object.values(SOCIAL_LINKS).map((social, i) => (
-          <a 
-            key={i}
-            href={social.url}
-            target="_blank"
-            rel="noreferrer"
-            className={`${social.bg} ${social.hover} text-white px-4 py-2 rounded-full text-sm font-bold transition flex items-center gap-2 shadow-md`}
-          >
-            <span>{social.icon}</span> {social.name}
+      <div className="flex flex-wrap gap-3 mt-8 justify-center">
+        {SOCIAL_LINKS.map((social, i) => (
+          <a key={i} href={social.url} target="_blank" rel="noreferrer" className={`${social.color} ${social.hover} text-white px-5 py-2.5 rounded-full text-sm font-bold transition flex items-center gap-2 shadow-md`}>
+            <span className="text-lg">{social.icon}</span> {social.name}
           </a>
         ))}
       </div>
@@ -1208,9 +974,7 @@ function Footer({ t, handleSelectLanguage, ALL_LANGUAGES, SOCIAL_LINKS }) {
           <div className="space-y-1 text-slate-400">
             <p className="font-semibold text-amber-400">{t.brand} HQ</p>
             <p className="font-bold text-white text-sm">📞 +996 553 720 108</p>
-            <p className="text-green-400 font-bold flex items-center gap-1">
-              💬 <a href="https://wa.me/996553720108" target="_blank" rel="noreferrer" className="hover:underline">WhatsApp</a>
-            </p>
+            <p className="text-green-400 font-bold flex items-center gap-1">💬 <a href="https://wa.me/996553720108" target="_blank" rel="noreferrer" className="hover:underline">WhatsApp</a></p>
             <p className="flex items-center gap-1">✉️ <a href="mailto:islamrasmiy@gmail.com" className="hover:text-orange-400 transition">islamrasmiy@gmail.com</a></p>
           </div>
         </div>
@@ -1225,23 +989,15 @@ function Footer({ t, handleSelectLanguage, ALL_LANGUAGES, SOCIAL_LINKS }) {
         <div className="space-y-2">
           <h4 className="font-bold text-white text-sm uppercase tracking-wider">{t.footer.socials}</h4>
           <div className="flex flex-wrap gap-2">
-            {Object.values(SOCIAL_LINKS).map((social, i) => (
-              <a 
-                key={i}
-                href={social.url}
-                target="_blank"
-                rel="noreferrer"
-                className={`${social.bg} ${social.hover} text-white px-3 py-1.5 rounded-full text-[10px] font-bold transition flex items-center gap-1`}
-              >
+            {SOCIAL_LINKS.map((social, i) => (
+              <a key={i} href={social.url} target="_blank" rel="noreferrer" className={`${social.color} hover:opacity-80 text-white px-3 py-1.5 rounded-full text-[10px] font-bold transition flex items-center gap-1`}>
                 {social.icon} {social.name}
               </a>
             ))}
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto pt-4 text-center text-slate-500 text-[11px]">
-        {t.footer.copyright}
-      </div>
+      <div className="max-w-7xl mx-auto pt-4 text-center text-slate-500 text-[11px]">{t.footer.copyright}</div>
     </footer>
   );
 }
