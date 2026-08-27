@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Pricing - Lingo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-slate-900">Lingo</a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-blue-600">Home</a>
+                <a href="about.html" class="hover:text-blue-600">About Us</a>
+                <a href="services.html" class="text-blue-600">Services</a>
+                <a href="courses.html" class="hover:text-blue-600">Courses</a>
+                <a href="articles.html" class="hover:text-blue-600">Articles</a>
+            </div>
+            <a href="contact.html" class="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Pricing Section with Real Billing Simulation -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h1 class="text-3xl font-extrabold text-slate-900">Pricing Structure & Levels</h1>
+            <p class="text-gray-600 mt-2">Choose the perfect plan for your language learning goals with secure billing.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Beginner Level -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-xl text-slate-900">Beginner Level</h3>
+                    <p class="text-gray-500 text-sm mt-1">Basic vocabulary and essential grammar foundations.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-extart font-black text-slate-900">95</span> <span class="text-gray-500 font-medium">AED / hour</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Interactive simple dialogues</li>
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Guided pronunciation practice</li>
+                    </ul>
+                </div>
+                <button onclick="startBilling('Beginner Level', 95)" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition">Choose Plan</button>
+            </div>
+
+            <!-- Intermediate Level (Most Popular) -->
+            <div class="bg-slate-900 text-white rounded-3xl p-8 shadow-xl relative flex flex-col justify-between border-2 border-amber-400">
+                <span class="absolute -top-3 right-8 bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Most Popular</span>
+                <div>
+                    <h3 class="font-bold text-xl text-white">Intermediate Level</h3>
+                    <p class="text-gray-400 text-sm mt-1">Expanded vocabulary and structural communication.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-black text-white">95</span> <span class="text-gray-400 font-medium">AED / hour</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                        <li><i class="fa-solid fa-check text-amber-400 mr-2"></i> Discussion-based live sessions</li>
+                        <li><i class="fa-solid fa-check text-amber-400 mr-2"></i> Complex grammar integration</li>
+                    </ul>
+                </div>
+                <button onclick="startBilling('Intermediate Level', 95)" class="w-full bg-amber-400 text-slate-900 py-3 rounded-xl font-bold hover:bg-amber-300 transition">Choose Plan</button>
+            </div>
+
+            <!-- Advanced Level -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-xl text-slate-900">Advanced Level</h3>
+                    <p class="text-gray-500 text-sm mt-1">Advanced fluency and professional communication.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-black text-slate-900">95</span> <span class="text-gray-500 font-medium">AED / hour</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Debates, presentations & critical analysis</li>
+                        <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Refined writing skills & academic style</li>
+                    </ul>
+                </div>
+                <button onclick="startBilling('Advanced Level', 95)" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition">Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-400 py-8 text-center text-xs mt-20">
+        <p>Copyright © 2026 Lingo Languages Institute LLC. All Rights Reserved.</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

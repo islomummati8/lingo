@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lingo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-slate-900">Lingo</a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-blue-600">Home</a>
+                <a href="about.html" class="hover:text-blue-600">About Us</a>
+                <a href="services.html" class="hover:text-blue-600">Services</a>
+                <a href="courses.html" class="hover:text-blue-600">Courses</a>
+                <a href="articles.html" class="hover:text-blue-600">Articles</a>
+            </div>
+            <a href="contact.html" class="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold">Contact Us</a>
+        </div>
+    </nav>
+
+    <section class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+            <h1 class="text-3xl font-extrabold text-slate-900 mb-4">Start Your Language Journey with Us</h1>
+            <p class="text-gray-600 mb-8">Get in touch to discuss your learning goals. Please give us a call, drop us an email, or fill out the form.</p>
+            
+            <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-xl flex items-center justify-center font-bold"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Address</h4>
+                        <p class="text-gray-600 text-sm">Osh, Kyrgyzstan / UAE</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="bg-emerald-100 text-emerald-600 w-10 h-10 rounded-xl flex items-center justify-center font-bold"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Phone / WhatsApp</h4>
+                        <p class="text-gray-600 text-sm">+996 553 720 108</p>
+                        <a href="https://wa.me/996553720108" target="_blank" class="text-emerald-600 text-xs font-bold hover:underline">Open WhatsApp Chat →</a>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="bg-amber-100 text-amber-600 w-10 h-10 rounded-xl flex items-center justify-center font-bold"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Email Us</h4>
+                        <p class="text-gray-600 text-sm">islamrasmiy@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
+            <h3 class="text-xl font-bold text-slate-900 mb-6">Drop Us a Line</h3>
+            <form id="contactForm" onsubmit="submitContactForm(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Full Name</label>
+                    <input type="text" id="cName" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Email</label>
+                    <input type="email" id="cEmail" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Message / Questions</label>
+                    <textarea id="cMsg" rows="4" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-600"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition">Get in Touch</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-gray-400 py-8 text-center text-xs mt-20">
+        <p>Copyright © 2026 Lingo Languages Institute LLC. All Rights Reserved.</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

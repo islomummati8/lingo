@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Lingo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-white text-xs sm:text-sm py-2 px-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <span><i class="fa-solid fa-phone text-emerald-400"></i> +996 553 720 108</span>
+            <a href="https://wa.me/996553720108" target="_blank" class="hover:text-emerald-400 flex items-center space-x-1">
+                <i class="fa-brands fa-whatsapp text-emerald-400"></i> <span>WhatsApp</span>
+            </a>
+        </div>
+        <div class="hidden md:flex space-x-4">
+            <a href="https://www.youtube.com/@islamicummah571" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/lingoplatform" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.instagram.com/lingo_platform" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-slate-900">Lingo</a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-blue-600">Home</a>
+                <a href="about.html" class="hover:text-blue-600">About Us</a>
+                <a href="services.html" class="hover:text-blue-600">Services</a>
+                <a href="courses.html" class="text-blue-600 font-bold">Courses</a>
+                <a href="articles.html" class="hover:text-blue-600">Articles</a>
+            </div>
+            <a href="contact.html" class="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto px-4 py-12 text-center">
+        <p class="text-sm font-semibold text-gray-500 uppercase tracking-widest"><a href="index.html" class="hover:underline">Home</a> / Courses</p>
+        <h1 class="text-4xl font-black text-slate-900 mt-2">Explore Our Languages</h1>
+        <p class="text-gray-600 mt-2">18 languages. Expert instructors. Flexible schedules. Start with a free class.</p>
+    </header>
+
+    <!-- Courses Grid -->
+    <main class="max-w-7xl mx-auto px-4 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Arabic -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-slate-900">Arabic</h3>
+                        <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">All levels</span>
+                    </div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Instructor" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Fida Abo Hasson</h4>
+                            <p class="text-xs text-gray-500">Arabic & IELTS Instructor</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="startBilling('Arabic Language Course', 95)" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition text-center text-sm">Book Free Trial →</button>
+            </div>
+
+            <!-- English -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-slate-900">English</h3>
+                        <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">All levels</span>
+                    </div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Instructor" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Fida Abo Hasson</h4>
+                            <p class="text-xs text-gray-500">English Expert</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="startBilling('English Language Course', 95)" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition text-center text-sm">Book Free Trial →</button>
+            </div>
+
+            <!-- Hebrew -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-slate-900">Hebrew</h3>
+                        <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">All levels</span>
+                    </div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Instructor" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Shehab Saber</h4>
+                            <p class="text-xs text-gray-500">Hebrew Instructor</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="startBilling('Hebrew Language Course', 95)" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition text-center text-sm">Book Free Trial →</button>
+            </div>
+
+            <!-- Uzbek -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-slate-900">Uzbek</h3>
+                        <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">All levels</span>
+                    </div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Instructor" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Halima</h4>
+                            <p class="text-xs text-gray-500">Uzbek & Kyrgyz Expert</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="startBilling('Uzbek Language Course', 95)" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition text-center text-sm">Book Free Trial →</button>
+            </div>
+
+            <!-- German -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-slate-900">German</h3>
+                        <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">All levels</span>
+                    </div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" alt="Instructor" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Mahmoud Elsheikh</h4>
+                            <p class="text-xs text-gray-500">German Instructor</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="startBilling('German Language Course', 95)" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition text-center text-sm">Book Free Trial →</button>
+            </div>
+
+            <!-- Coming Soon Course -->
+            <div class="bg-slate-900 text-white rounded-3xl p-6 shadow-xl flex flex-col justify-between relative overflow-hidden">
+                <div>
+                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-900 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase">Coming Soon</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Japanese</h3>
+                    <p class="text-gray-400 text-sm">We're preparing this course. Join waitlist to be the first to know.</p>
+                </div>
+                <div class="mt-6">
+                    <input type="email" id="waitlistEmail" placeholder="Enter your email" class="w-full bg-slate-800 border border-slate-700 px-4 py-2 rounded-xl text-sm text-white mb-2 focus:outline-none">
+                    <button onclick="subscribeWaitlist()" class="w-full bg-amber-400 text-slate-900 py-2.5 rounded-xl font-bold hover:bg-amber-300 transition text-sm">Notify Me</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">Lingo</h3>
+                <p class="text-sm">Master Any Language, Anywhere with expert instructors.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3">Contacts</h4>
+                <p class="text-sm mb-2"><i class="fa-solid fa-location-dot text-emerald-400 mr-2"></i> Kyrgyzstan, Osh</p>
+                <p class="text-sm mb-2"><i class="fa-solid fa-phone text-emerald-400 mr-2"></i> +996 553 720 108</p>
+                <p class="text-sm mb-2"><a href="https://wa.me/996553720108" target="_blank" class="hover:text-white"><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> WhatsApp</a></p>
+                <p class="text-sm"><i class="fa-solid fa-envelope text-emerald-400 mr-2"></i> islamrasmiy@gmail.com</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3">In Socials</h4>
+                <div class="flex space-x-4 text-xl">
+                    <a href="https://www.youtube.com/@islamicummah571" target="_blank" class="hover:text-white"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://t.me/lingoplatform" target="_blank" class="hover:text-white"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.instagram.com/lingo_platform" target="_blank" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3">Subscribe</h4>
+                <p class="text-xs text-gray-400 mb-2">Get news & updates in your inbox.</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-slate-800 text-center text-xs">
+            Copyright © 2026 Lingo Languages Institute LLC. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+    <script>
+        function subscribeWaitlist() {
+            const email = document.getElementById('waitlistEmail').value;
+            if(email) {
+                alert("Tabriklaymiz! Yaponiya tili kursi ochilganda sizga birinchilardan bo'lib xabar beramiz.");
+                document.getElementById('waitlistEmail').value = '';
+            } else {
+                alert("Iltimos emailingizni kiriting.");
+            }
+        }
+    </script>
+</body>
+</html>
