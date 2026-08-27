@@ -97,13 +97,13 @@ const INSTRUCTORS = [
 const translations = {
   en: {
     topContact: "Contact via WhatsApp",
-    brand: "Lahjaro",
+    brand: "Lingo",
     nav: { home: "Home", about: "About Us", services: "Services", courses: "Courses", articles: "Articles", contact: "Contact Us" },
     hero: {
       title1: "Learn Languages",
       title2: "Live Better",
       title3: "Speak Confidently",
-      desc: "Lahjaro is a multilingual language academy offering structured learning with cultural understanding for students worldwide.",
+      desc: "Lingo is a multilingual language academy offering structured learning with cultural understanding for students worldwide.",
       btnStart: "Start Today →",
       btnExplore: "Explore Languages →"
     },
@@ -133,7 +133,9 @@ const translations = {
         { title: "Affordability", desc: "Quality education as an investment in the future – not a financial burden." },
         { title: "Live Feedback", desc: "Real-time correction and guidance during every live session." }
       ],
-      students: "200+ Happy Students"
+      students: "200+ Happy Students",
+      masterTitle: "Master Any Language, Anywhere",
+      masterDesc: "We offer a range of language courses carefully curated to suit your needs."
     },
     pricing: {
       title: "Pricing Structure & Levels",
@@ -191,7 +193,7 @@ const translations = {
     instructors: {
       title: "Our Instructors",
       subtitle: "Master the Language with Expert Instructors",
-      desc: "At Lahjaro, our instructors are more than teachers — they are mentors who guide, support, and motivate. Each member of our team is carefully selected based on academic qualifications, real classroom experience, and the ability to connect with learners from different cultures and backgrounds.",
+      desc: "At Lingo, our instructors are more than teachers — they are mentors who guide, support, and motivate. Each member of our team is carefully selected based on academic qualifications, real classroom experience, and the ability to connect with learners from different cultures and backgrounds.",
       qualities: [
         "Proven instructing expertise",
         "Clear and engaging communication",
@@ -202,9 +204,9 @@ const translations = {
     contactPage: {
       title: "Start Your Language Journey with Us",
       desc: "Get in touch to discuss your learning goals today. Please give us a call, drop us an email, or fill out the form.",
-      address: "UAE",
-      phone: "+971 50 532 5083",
-      email: "info@lahjaro.com",
+      address: "Kyrgyzstan",
+      phone: "+996 553 720 108",
+      email: "islamrasmiy@gmail.com",
       formTitle: "Drop Us a Line",
       name: "Full Name",
       email: "Email Address",
@@ -214,11 +216,11 @@ const translations = {
       message: "Message / Questions",
       btn: "Get in Touch →",
       educatorTitle: "Join Our Team of Expert Educators",
-      educatorDesc: "We're looking for passionate language instructors to join Lahjaro. If you're qualified, experienced, and love instructing — we want to hear from you.",
+      educatorDesc: "We're looking for passionate language instructors to join Lingo. If you're qualified, experienced, and love instructing — we want to hear from you.",
       educatorBenefits: [
         "Flexible instructing hours to fit your schedule",
         "Competitive pay and performance bonuses",
-        "International student community across the UAE"
+        "International student community across the world"
       ],
       applyName: "Name",
       applyPhone: "Phone",
@@ -249,18 +251,18 @@ const translations = {
       contacts: "Contacts",
       subscribe: "Subscribe",
       socials: "In Socials",
-      copyright: "Copyright © 2026 Lahjaro Languages Institute FZ-LLC. All Rights Reserved."
+      copyright: "Copyright © 2026 Lingo Languages Institute. All Rights Reserved."
     }
   },
   ar: {
     topContact: "تواصل معنا عبر الواتساب",
-    brand: "لحجرو",
+    brand: "لينجو",
     nav: { home: "الرئيسية", about: "من نحن", services: "الخدمات", courses: "الدورات", articles: "المقالات", contact: "تواصل معنا" },
     hero: {
       title1: "تعلم اللغات",
       title2: "عيش حياة أفضل",
       title3: "تحدث بثقة",
-      desc: "لحجرو هي أكاديمية لغات عالمية تقدم تعليماً مهيكلاً مع فهم ثقافي عميق للطلاب في جميع أنحاء العالم.",
+      desc: "لينجو هي أكاديمية لغات عالمية تقدم تعليماً مهيكلاً مع فهم ثقافي عميق للطلاب في جميع أنحاء العالم.",
       btnStart: "ابدأ اليوم ←",
       btnExplore: "استكشف اللغات ←"
     },
@@ -290,7 +292,9 @@ const translations = {
         { title: "أسعار معقولة", desc: "تعليم عالي الجودة كاستثمار في المستقبل – وليس عبئًا ماليًا." },
         { title: "ملاحظات فورية", desc: "تصحيح وتوجيه فوري خلال كل جلسة مباشرة." }
       ],
-      students: "٢٠٠+ طالب سعيد"
+      students: "٢٠٠+ طالب سعيد",
+      masterTitle: "اتقن أي لغة في أي مكان",
+      masterDesc: "نقدم مجموعة من دورات اللغة المصممة بعناية لتلبية احتياجاتك."
     },
     pricing: {
       title: "هيكل التسعير والمستويات",
@@ -348,7 +352,7 @@ const translations = {
     instructors: {
       title: "مدربونا",
       subtitle: "اتقن اللغة مع مدربين خبراء",
-      desc: "في لحجرو، مدربونا هم أكثر من مجرد معلمين — إنهم مرشدون يوجهون ويدعمون ويحفزون. يتم اختيار كل عضو في فريقنا بعناية بناءً على المؤهلات الأكاديمية والخبرة الصفية الحقيقية والقدرة على التواصل مع المتعلمين من ثقافات وخلفيات مختلفة.",
+      desc: "في لينجو، مدربونا هم أكثر من مجرد معلمين — إنهم مرشدون يوجهون ويدعمون ويحفزون. يتم اختيار كل عضو في فريقنا بعناية بناءً على المؤهلات الأكاديمية والخبرة الصفية الحقيقية والقدرة على التواصل مع المتعلمين من ثقافات وخلفيات مختلفة.",
       qualities: [
         "خبرة تدريس مثبتة",
         "تواصل واضح وجذاب",
@@ -359,9 +363,9 @@ const translations = {
     contactPage: {
       title: "ابدأ رحلتك اللغوية معنا",
       desc: "تواصل معنا اليوم لمناقشة أهدافك التعليمية. اتصل بنا أو راسلنا عبر البريد الإلكتروني أو املأ النموذج.",
-      address: "الإمارات العربية المتحدة",
-      phone: "+971 50 532 5083",
-      email: "info@lahjaro.com",
+      address: "قيرغيزستان",
+      phone: "+996 553 720 108",
+      email: "islamrasmiy@gmail.com",
       formTitle: "أرسل لنا رسالة",
       name: "الاسم الكامل",
       email: "البريد الإلكتروني",
@@ -371,11 +375,11 @@ const translations = {
       message: "الرسالة / الأسئلة",
       btn: "تواصل معنا ←",
       educatorTitle: "انضم إلى فريق المدربين الخبراء لدينا",
-      educatorDesc: "نحن نبحث عن مدربي لغات شغوفين للانضمام إلى لحجرو. إذا كنت مؤهلاً وذو خبرة وتحب التدريس — نريد أن نسمع منك.",
+      educatorDesc: "نحن نبحث عن مدربي لغات شغوفين للانضمام إلى لينجو. إذا كنت مؤهلاً وذو خبرة وتحب التدريس — نريد أن نسمع منك.",
       educatorBenefits: [
         "ساعات تدريس مرنة تناسب جدولك",
         "أجور تنافسية ومكافآت أداء",
-        "مجتمع طلابي دولي في جميع أنحاء الإمارات"
+        "مجتمع طلابي دولي في جميع أنحاء العالم"
       ],
       applyName: "الاسم",
       applyPhone: "الهاتف",
@@ -406,7 +410,7 @@ const translations = {
       contacts: "جهات الاتصال",
       subscribe: "اشترك",
       socials: "وسائل التواصل الاجتماعي",
-      copyright: "جميع الحقوق محفوظة © ٢٠٢٦ معهد لحجرو للغات FZ-LLC"
+      copyright: "جميع الحقوق محفوظة © ٢٠٢٦ معهد لينجو للغات"
     }
   }
 };
@@ -458,7 +462,7 @@ function AdminPanel({ onBack }) {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 border-b border-slate-800">
           <div>
-            <h1 className="text-2xl font-bold text-amber-500">Lahjaro Admin Panel</h1>
+            <h1 className="text-2xl font-bold text-amber-500">Lingo Admin Panel</h1>
             <p className="text-xs text-slate-400">Real-Time Firebase Submissions</p>
           </div>
           <button onClick={onBack} className="mt-3 md:mt-0 bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm border border-slate-700 transition">
@@ -541,6 +545,47 @@ function AdminPanel({ onBack }) {
     </div>
   );
 }
+
+// ============================================================
+// SOCIAL ICONS
+// ============================================================
+const SOCIAL_LINKS = {
+  youtube: { 
+    name: 'YouTube', 
+    url: 'https://www.youtube.com/@islamicummah571', 
+    icon: '▶️',
+    bg: 'bg-red-600',
+    hover: 'hover:bg-red-700'
+  },
+  telegram: { 
+    name: 'Telegram', 
+    url: 'https://t.me/lingoplatform', 
+    icon: '✈️',
+    bg: 'bg-blue-600',
+    hover: 'hover:bg-blue-700'
+  },
+  instagram: { 
+    name: 'Instagram', 
+    url: 'https://www.instagram.com/lingo_platform', 
+    icon: '📸',
+    bg: 'bg-pink-600',
+    hover: 'hover:bg-pink-700'
+  },
+  whatsapp: { 
+    name: 'WhatsApp', 
+    url: 'https://wa.me/996553720108', 
+    icon: '💬',
+    bg: 'bg-green-600',
+    hover: 'hover:bg-green-700'
+  },
+  email: { 
+    name: 'Email', 
+    url: 'mailto:islamrasmiy@gmail.com', 
+    icon: '✉️',
+    bg: 'bg-gray-600',
+    hover: 'hover:bg-gray-700'
+  }
+};
 
 // ============================================================
 // MAIN APP
@@ -637,7 +682,7 @@ export default function App() {
           <div className="bg-white rounded-3xl max-w-2xl w-full p-6 md:p-8 relative shadow-2xl flex flex-col md:flex-row items-center gap-6">
             <button onClick={() => setShowPromoModal(false)} className="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-xl font-bold bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition hover:bg-slate-200">×</button>
             <div className="w-full md:w-1/2 h-56 md:h-64 rounded-2xl overflow-hidden bg-slate-100 border">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" alt="Lahjaro Offer" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" alt="Lingo Offer" className="w-full h-full object-cover" />
             </div>
             <div className="w-full md:w-1/2 space-y-3">
               <span className="text-[10px] font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-full uppercase tracking-wider">Exclusive Launch Offer</span>
@@ -654,11 +699,11 @@ export default function App() {
       {/* TOP HEADER */}
       <header className="bg-[#FFF0E5] text-slate-700 text-xs py-2 px-4 md:px-8 flex flex-wrap justify-between items-center border-b border-orange-100 gap-2">
         <div className="flex flex-wrap items-center gap-3 md:gap-6 font-medium">
-          <a href="mailto:info@lahjaro.com" className="hover:text-orange-600 transition flex items-center gap-1">
-            ✉️ <span className="hidden sm:inline">info@lahjaro.com</span>
+          <a href="mailto:islamrasmiy@gmail.com" className="hover:text-orange-600 transition flex items-center gap-1">
+            ✉️ <span className="hidden sm:inline">islamrasmiy@gmail.com</span>
           </a>
-          <a href="https://wa.me/971505325083" target="_blank" rel="noreferrer" className="hover:text-green-600 transition flex items-center gap-1 font-bold text-green-700">
-            💬 <span className="hidden sm:inline">+971 50 532 5083</span>
+          <a href="https://wa.me/996553720108" target="_blank" rel="noreferrer" className="hover:text-green-600 transition flex items-center gap-1 font-bold text-green-700">
+            💬 <span className="hidden sm:inline">+996 553 720 108</span>
           </a>
         </div>
         <button onClick={() => setCurrentPage('admin')} className="text-slate-500 hover:text-orange-600 font-semibold text-xs transition">🔑 Admin</button>
@@ -711,17 +756,32 @@ export default function App() {
       {currentPage === 'courses' ? (
         <CoursesPage t={t} handleSelectLanguage={handleSelectLanguage} ALL_LANGUAGES={ALL_LANGUAGES} />
       ) : currentPage === 'contact' ? (
-        <ContactPage t={t} formData={formData} setFormData={setFormData} educatorForm={educatorForm} setEducatorForm={setEducatorForm} selectedCourse={selectedCourse} setSelectedCourse={setSelectedCourse} selectedModel={selectedModel} setSelectedModel={setSelectedModel} submitting={submitting} handleFormSubmit={handleFormSubmit} handleEducatorSubmit={handleEducatorSubmit} ALL_LANGUAGES={ALL_LANGUAGES} />
+        <ContactPage 
+          t={t} 
+          formData={formData} 
+          setFormData={setFormData} 
+          educatorForm={educatorForm} 
+          setEducatorForm={setEducatorForm} 
+          selectedCourse={selectedCourse} 
+          setSelectedCourse={setSelectedCourse} 
+          selectedModel={selectedModel} 
+          setSelectedModel={setSelectedModel} 
+          submitting={submitting} 
+          handleFormSubmit={handleFormSubmit} 
+          handleEducatorSubmit={handleEducatorSubmit} 
+          ALL_LANGUAGES={ALL_LANGUAGES}
+          SOCIAL_LINKS={SOCIAL_LINKS}
+        />
       ) : currentPage === 'about' ? (
         <AboutPage t={t} />
       ) : currentPage === 'services' ? (
         <ServicesPage t={t} handleSelectLanguage={handleSelectLanguage} />
       ) : (
-        <HomePage t={t} slide={slide} handleSelectLanguage={handleSelectLanguage} ALL_LANGUAGES={ALL_LANGUAGES} INSTRUCTORS={INSTRUCTORS} />
+        <HomePage t={t} slide={slide} handleSelectLanguage={handleSelectLanguage} ALL_LANGUAGES={ALL_LANGUAGES} INSTRUCTORS={INSTRUCTORS} SOCIAL_LINKS={SOCIAL_LINKS} />
       )}
 
       {/* FOOTER */}
-      <Footer t={t} handleSelectLanguage={handleSelectLanguage} ALL_LANGUAGES={ALL_LANGUAGES} />
+      <Footer t={t} handleSelectLanguage={handleSelectLanguage} ALL_LANGUAGES={ALL_LANGUAGES} SOCIAL_LINKS={SOCIAL_LINKS} />
     </div>
   );
 }
@@ -729,7 +789,7 @@ export default function App() {
 // ============================================================
 // HOME PAGE
 // ============================================================
-function HomePage({ t, slide, handleSelectLanguage, ALL_LANGUAGES, INSTRUCTORS }) {
+function HomePage({ t, slide, handleSelectLanguage, ALL_LANGUAGES, INSTRUCTORS, SOCIAL_LINKS }) {
   return (
     <>
       {/* HERO */}
@@ -775,7 +835,7 @@ function HomePage({ t, slide, handleSelectLanguage, ALL_LANGUAGES, INSTRUCTORS }
 
         <div className="md:w-1/2 flex justify-center w-full">
           <div className="relative w-full max-w-md h-[350px] bg-slate-200 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800" alt="Lahjaro Academy" className="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800" alt="Lingo Academy" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -802,27 +862,8 @@ function HomePage({ t, slide, handleSelectLanguage, ALL_LANGUAGES, INSTRUCTORS }
         </div>
       </section>
 
-      {/* APPROACH / METHOD */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-3xl font-extrabold text-[#0A1128] mb-4">{t.approach.title}</h2>
-            <p className="text-slate-600 text-sm leading-relaxed mb-6">{t.approach.desc}</p>
-            <button onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#0A1128] hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-full transition shadow-lg text-sm">{t.approach.btn}</button>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            {t.approach.items.map((item, i) => (
-              <div key={i} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                <h4 className="font-bold text-[#0A1128] text-sm mb-1">{item.title}</h4>
-                <p className="text-[10px] text-slate-500 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="mt-8 text-center">
-          <span className="text-sm font-bold text-orange-600 bg-orange-100 px-6 py-3 rounded-full">⭐ {t.approach.students}</span>
-        </div>
-      </section>
+      {/* APPROACH / METHOD - SKRINSHOTDAGI KABI */}
+      <ApproachSection t={t} />
 
       {/* INSTRUCTORS */}
       <section className="bg-[#0A1128] text-white py-16 px-4 md:px-8">
@@ -887,6 +928,67 @@ function HomePage({ t, slide, handleSelectLanguage, ALL_LANGUAGES, INSTRUCTORS }
 }
 
 // ============================================================
+// APPROACH SECTION (SKRINSHOTDAGI KABI)
+// ============================================================
+function ApproachSection({ t }) {
+  return (
+    <section className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* Chap tomon - Our Approach */}
+        <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg">
+          <h2 className="text-3xl font-extrabold text-[#0A1128] mb-4">{t.approach.title}</h2>
+          <p className="text-slate-600 text-sm leading-relaxed mb-6">
+            {t.approach.desc}
+          </p>
+          <button 
+            onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })} 
+            className="bg-[#0A1128] hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition shadow-lg text-sm"
+          >
+            {t.approach.btn}
+          </button>
+        </div>
+
+        {/* O'ng tomon - 4 ta kartochka */}
+        <div className="grid grid-cols-2 gap-4">
+          {t.approach.items.map((item, i) => {
+            const icons = ['📚', '🌍', '💰', '💬'];
+            const colors = ['blue', 'amber', 'green', 'purple'];
+            return (
+              <div key={i} className={`bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:-translate-y-1`}>
+                <div className={`w-12 h-12 rounded-2xl bg-${colors[i]}-100 text-${colors[i]}-600 flex items-center justify-center text-xl font-bold mb-3`}>
+                  {icons[i]}
+                </div>
+                <h4 className="font-bold text-[#0A1128] text-sm mb-1">{item.title}</h4>
+                <p className="text-[10px] text-slate-500 leading-relaxed">{item.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 200+ Happy Students */}
+      <div className="mt-8 text-center">
+        <span className="text-sm font-bold text-orange-600 bg-orange-100 px-8 py-3 rounded-full shadow-sm inline-flex items-center gap-2">
+          ⭐ {t.approach.students}
+        </span>
+      </div>
+
+      {/* Master Any Language, Anywhere */}
+      <div className="mt-12 text-center bg-[#0A1128] text-white p-10 rounded-3xl">
+        <h3 className="text-2xl md:text-3xl font-extrabold">{t.approach.masterTitle}</h3>
+        <p className="text-sm text-slate-400 mt-2 max-w-xl mx-auto">{t.approach.masterDesc}</p>
+        <button 
+          onClick={() => window.location.hash = 'courses'} 
+          className="mt-4 bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-3 rounded-full transition text-sm shadow-lg"
+        >
+          Start Your Journey →
+        </button>
+      </div>
+    </section>
+  );
+}
+
+// ============================================================
 // ABOUT PAGE
 // ============================================================
 function AboutPage({ t }) {
@@ -908,7 +1010,6 @@ function AboutPage({ t }) {
         <button onClick={() => window.location.hash = 'courses'} className="bg-[#0A1128] hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-full transition text-sm">{t.about.btn}</button>
       </div>
 
-      {/* Vision & Mission */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         <div className="bg-[#0A1128] text-white p-6 rounded-2xl">
           <h3 className="text-xl font-bold text-amber-400">{t.vision.title}</h3>
@@ -935,8 +1036,8 @@ function ServicesPage({ t, handleSelectLanguage }) {
     { title: "Professionally Designed Curricula", desc: "Structured programs that develop listening, reading, writing, and speaking in a balanced and progressive way." },
     { title: "Placement & Level Assessment Tests", desc: "Know exactly where you stand and get placed in the right program from day one." },
     { title: "Exam Preparation", desc: "IELTS, TOEFL, and PTE preparation programs with expert trainers." },
-    { title: "Corporate & Customized Training", desc: "Custom language solutions for businesses, teams, and organizations across the UAE." },
-    { title: "Weekly/Monthly Free Group Sessions", desc: "Free group online meetings and courses to practice, connect, and grow your skills together with fellow learners." }
+    { title: "Corporate & Customized Training", desc: "Custom language solutions for businesses, teams, and organizations." },
+    { title: "Weekly/Monthly Free Group Sessions", desc: "Free group online meetings and courses to practice, connect, and grow your skills together." }
   ];
 
   return (
@@ -972,7 +1073,7 @@ function CoursesPage({ t, handleSelectLanguage, ALL_LANGUAGES }) {
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-8 py-12 animate-fadeIn">
       <div className="text-center mb-10">
-        <span className="text-xs font-bold uppercase tracking-widest text-orange-600">Lahjaro Academic Catalog</span>
+        <span className="text-xs font-bold uppercase tracking-widest text-orange-600">{t.brand} Academic Catalog</span>
         <h1 className="text-3xl md:text-5xl font-extrabold text-[#0A1128] mt-2 mb-3">Explore Our Languages</h1>
         <p className="text-slate-600 max-w-xl mx-auto text-sm">15+ languages. Expert instructors. Flexible schedules. Start with a few classes.</p>
       </div>
@@ -994,7 +1095,11 @@ function CoursesPage({ t, handleSelectLanguage, ALL_LANGUAGES }) {
 // ============================================================
 // CONTACT PAGE
 // ============================================================
-function ContactPage({ t, formData, setFormData, educatorForm, setEducatorForm, selectedCourse, setSelectedCourse, selectedModel, setSelectedModel, submitting, handleFormSubmit, handleEducatorSubmit, ALL_LANGUAGES }) {
+function ContactPage({ 
+  t, formData, setFormData, educatorForm, setEducatorForm, 
+  selectedCourse, setSelectedCourse, selectedModel, setSelectedModel, 
+  submitting, handleFormSubmit, handleEducatorSubmit, ALL_LANGUAGES, SOCIAL_LINKS 
+}) {
   const models = ['Group Classes', 'One-to-One', 'Corporate Program', 'Exam Preparation'];
 
   return (
@@ -1053,9 +1158,90 @@ function ContactPage({ t, formData, setFormData, educatorForm, setEducatorForm, 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
         <div><p className="text-xs text-slate-400">📍 Address</p><p className="font-bold text-sm">{t.contactPage.address}</p></div>
         <div><p className="text-xs text-slate-400">📞 Phone</p><p className="font-bold text-sm">{t.contactPage.phone}</p></div>
-        <div><p className="text-xs text-slate-400">💬 WhatsApp</p><a href="https://wa.me/971505325083" target="_blank" rel="noreferrer" className="font-bold text-sm text-green-700 hover:underline">Chat Now</a></div>
-        <div><p className="text-xs text-slate-400">✉️ Email</p><p className="font-bold text-sm">{t.contactPage.email}</p></div>
+        <div>
+          <p className="text-xs text-slate-400">💬 WhatsApp</p>
+          <a href="https://wa.me/996553720108" target="_blank" rel="noreferrer" className="font-bold text-sm text-green-700 hover:underline flex items-center gap-1">
+            <span>💬</span> Chat Now
+          </a>
+        </div>
+        <div>
+          <p className="text-xs text-slate-400">✉️ Email</p>
+          <a href="mailto:islamrasmiy@gmail.com" className="font-bold text-sm text-orange-600 hover:underline">{t.contactPage.email}</a>
+        </div>
+      </div>
+
+      {/* Social Links */}
+      <div className="flex flex-wrap gap-3 mt-6 justify-center">
+        {Object.values(SOCIAL_LINKS).map((social, i) => (
+          <a 
+            key={i}
+            href={social.url}
+            target="_blank"
+            rel="noreferrer"
+            className={`${social.bg} ${social.hover} text-white px-4 py-2 rounded-full text-sm font-bold transition flex items-center gap-2 shadow-md`}
+          >
+            <span>{social.icon}</span> {social.name}
+          </a>
+        ))}
       </div>
     </section>
+  );
+}
+
+// ============================================================
+// FOOTER
+// ============================================================
+function Footer({ t, handleSelectLanguage, ALL_LANGUAGES, SOCIAL_LINKS }) {
+  return (
+    <footer className="bg-[#0A1128] text-white pt-12 pb-6 px-4 md:px-8 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 pb-8 border-b border-slate-800 text-xs">
+        <div className="space-y-2">
+          <h4 className="font-bold text-white text-sm uppercase tracking-wider">{t.footer.courses}</h4>
+          <ul className="space-y-1 text-slate-400">
+            {ALL_LANGUAGES.slice(0, 6).map((l, i) => (
+              <li key={i}><button onClick={() => handleSelectLanguage(l.name)} className="hover:text-orange-400 transition">{l.flag} {l.name}</button></li>
+            ))}
+          </ul>
+        </div>
+        <div className="space-y-2">
+          <h4 className="font-bold text-white text-sm uppercase tracking-wider">{t.footer.contacts}</h4>
+          <div className="space-y-1 text-slate-400">
+            <p className="font-semibold text-amber-400">{t.brand} HQ</p>
+            <p className="font-bold text-white text-sm">📞 +996 553 720 108</p>
+            <p className="text-green-400 font-bold flex items-center gap-1">
+              💬 <a href="https://wa.me/996553720108" target="_blank" rel="noreferrer" className="hover:underline">WhatsApp</a>
+            </p>
+            <p className="flex items-center gap-1">✉️ <a href="mailto:islamrasmiy@gmail.com" className="hover:text-orange-400 transition">islamrasmiy@gmail.com</a></p>
+          </div>
+        </div>
+        <div className="space-y-2">
+          <h4 className="font-bold text-white text-sm uppercase tracking-wider">{t.footer.subscribe}</h4>
+          <p className="text-slate-400">Get news & updates</p>
+          <div className="flex items-center bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+            <input type="email" placeholder="Your email..." className="bg-transparent px-3 py-2 text-xs text-white focus:outline-none w-full" />
+            <button className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-2 font-bold transition">→</button>
+          </div>
+        </div>
+        <div className="space-y-2">
+          <h4 className="font-bold text-white text-sm uppercase tracking-wider">{t.footer.socials}</h4>
+          <div className="flex flex-wrap gap-2">
+            {Object.values(SOCIAL_LINKS).map((social, i) => (
+              <a 
+                key={i}
+                href={social.url}
+                target="_blank"
+                rel="noreferrer"
+                className={`${social.bg} ${social.hover} text-white px-3 py-1.5 rounded-full text-[10px] font-bold transition flex items-center gap-1`}
+              >
+                {social.icon} {social.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto pt-4 text-center text-slate-500 text-[11px]">
+        {t.footer.copyright}
+      </div>
+    </footer>
   );
 }
