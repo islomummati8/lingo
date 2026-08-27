@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Lingo Language Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-[#FBF9F7] text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-[#2C241D] tracking-wider">Lingo</a>
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="text-gray-600 hover:text-amber-700 text-sm font-medium transition">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sign In / Sign Up Form Section -->
+    <main class="flex-grow flex items-center justify-center px-4 py-12">
+        <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-gray-100 max-w-md w-full">
+            
+            <div class="text-center mb-8">
+                <h1 id="form-title" class="text-2xl sm:text-3xl font-black text-[#2C241D]">Tizimga kirish</h1>
+                <p id="form-subtitle" class="text-gray-500 text-sm mt-2">Lingo akkauntingizga xush kelibsiz</p>
+            </div>
+
+            <!-- Xatolik yoki muvaffaqiyat xabari uchun joy -->
+            <div id="message-box" class="hidden mb-6 p-4 rounded-xl text-sm font-medium"></div>
+
+            <form id="auth-form" class="space-y-5">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Email manzil</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400"><i class="fa-regular fa-envelope"></i></span>
+                        <input type="email" id="email" required placeholder="name@example.com" class="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-amber-600 focus:bg-white transition">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Parol</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" id="password" required placeholder="••••••••" class="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-amber-600 focus:bg-white transition">
+                    </div>
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full bg-[#2C241D] text-white py-3.5 rounded-xl font-bold text-sm hover:bg-black transition shadow-lg">
+                    Kirish
+                </button>
+            </form>
+
+            <!-- Rejimni o'zgartirish (Kirish <-> Ro'yxatdan o'tish) -->
+            <div class="text-center mt-6">
+                <p id="toggle-text" class="text-sm text-gray-600">
+                    Akkauntingiz yo'qmi? 
+                    <button type="button" id="switch-mode-btn" class="text-amber-700 font-bold hover:underline ml-1">Ro'yxatdan o'tish</button>
+                </p>
+            </div>
+
+            <!-- Foydalanuvchi tizimga kirganidan keyin chiqadigan panel (Hidden by default) -->
+            <div id="user-profile" class="hidden text-center py-6">
+                <div class="w-16 h-16 bg-amber-100 text-amber-800 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <h3 class="text-lg font-bold text-[#2C241D]" id="user-email-display"></h3>
+                <p class="text-xs text-gray-500 mt-1 mb-6">Siz muvaffaqiyatli kirdingiz!</p>
+                <button id="logout-btn" class="w-full bg-red-50 text-red-600 border border-red-200 py-3 rounded-xl font-bold text-sm hover:bg-red-100 transition">
+                    Chiqish (Log Out)
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A1612] text-gray-400 py-6 text-center text-xs">
+        Copyright © 2026 Lingo Languages Institute. All Rights Reserved.
+    </footer>
+
+    <!-- Firebase Real integration script -->
+    <script type="module">
+        // Firebase kutubxonalarini CDN orqali chaqirish
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { 
+            getAuth, 
+            createUserWithEmailAndPassword, 
+            signInWithEmailAndPassword, 
+            onAuthStateChanged, 
+            signOut 
+        } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        // 🔥 BU YERGA O'ZINGizning Firebase Console'dan olgan konfiguratsiya ma'lumotlaringizni qo'ying
+        const firebaseConfig = {
+            apiKey: "AIzaSyBwKTCts9z9NIoB9N63NgPd3UyXaJrt2fo",
+            authDomain: "lingo-online-platform.firebaseapp.com",
+            projectId: "lingo-online-platform",
+            storageBucket: "lingo-online-platform.firebasestorage.app",
+            messagingSenderId: "1070656250360",
+            appId: "1:1070656250360:web:aca76db9cb3008ab7af60d"
+        };
+
+        // Firebase'ni ishga tushirish
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // HTML elementlarini ulash
+        const authForm = document.getElementById('auth-form');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const submitBtn = document.getElementById('submit-btn');
+        const formTitle = document.getElementById('form-title');
+        const formSubtitle = document.getElementById('form-subtitle');
+        const switchModeBtn = document.getElementById('switch-mode-btn');
+        const toggleText = document.getElementById('toggle-text');
+        const messageBox = document.getElementById('message-box');
+        const userProfile = document.getElementById('user-profile');
+        const userEmailDisplay = document.getElementById('user-email-display');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        let isSignUp = false; // Standart holat: Tizimga kirish (Sign In)
+
+        // Xatolik yoki xabarlarni chiqarish funksiyasi
+        function showMessage(text, isError = true) {
+            messageBox.textContent = text;
+            messageBox.classList.remove('hidden');
+            if (isError) {
+                messageBox.className = "mb-6 p-4 rounded-xl text-sm font-medium bg-red-50 text-red-600 border border-red-200";
+            } else {
+                messageBox.className = "mb-6 p-4 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-600 border border-emerald-200";
+            }
+        }
+
+        // Rejimni almashtirish (Kirish <-> Ro'yxatdan o'tish)
+        switchModeBtn.addEventListener('click', () => {
+            isSignUp = !isSignUp;
+            messageBox.classList.add('hidden');
+            if (isSignUp) {
+                formTitle.textContent = "Ro'yxatdan o'tish";
+                formSubtitle.textContent = "Yangi Lingo akkauntini yarating";
+                submitBtn.textContent = "Ro'yxatdan o'tish";
+                toggleText.innerHTML = `Akkauntingiz bormi? <button type="button" id="switch-mode-btn-inner" class="text-amber-700 font-bold hover:underline ml-1">Tizimga kirish</button>`;
+            } else {
+                formTitle.textContent = "Tizimga kirish";
+                formSubtitle.textContent = "Lingo akkauntingizga xush kelibsiz";
+                submitBtn.textContent = "Kirish";
+                toggleText.innerHTML = `Akkauntingiz yo'qmi? <button type="button" id="switch-mode-btn-inner" class="text-amber-700 font-bold hover:underline ml-1">Ro'yxatdan o'tish</button>`;
+            }
+            // Qayta ulash uchun event listener
+            document.getElementById('switch-mode-btn-inner').addEventListener('click', () => switchModeBtn.click());
+        });
+
+        // Forma yuborilganda (Submit)
+        authForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            messageBox.classList.add('hidden');
+
+            try {
+                if (isSignUp) {
+                    // Real Firebase orqali ro'yxatdan o'tish
+                    await createUserWithEmailAndPassword(auth, email, password);
+                    showMessage("Muvaffaqiyatli ro'yxatdan o'tdingiz!", false);
+                } else {
+                    // Real Firebase orqali tizimga kirish
+                    await signInWithEmailAndPassword(auth, email, password);
+                    showMessage("Tizimga muvaffaqiyatli kirdingiz!", false);
+                }
+            } catch (error) {
+                // Xatoliklarni foydalanuvchiga tushunarli qilib ko'rsatish
+                let errText = error.message;
+                if (error.code === 'auth/invalid-credential') errText = "Email yoki parol xato kiritildi.";
+                if (error.code === 'auth/email-already-in-use') errText = "Bu email allaqachon ro'yxatdan o'tgan.";
+                if (error.code === 'auth/weak-password') errText = "Parol juda qisqa (kamida 6 ta belgi bo'lishi kerak).";
+                showMessage(errText);
+            }
+        });
+
+        // Foydalanuvchi holatini kuzatib borish (Auth State Observer)
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // Foydalanuvchi kirgan bo'lsa formani yashirib, profilni chiqaramiz
+                authForm.classList.add('hidden');
+                toggleText.classList.add('hidden');
+                userProfile.classList.remove('hidden');
+                userEmailDisplay.textContent = user.email;
+            } else {
+                // Chiqib ketgan bo'lsa formani ko'rsatamiz
+                authForm.classList.remove('hidden');
+                toggleText.classList.remove('hidden');
+                userProfile.classList.add('hidden');
+            }
+        });
+
+        // Tizimdan chiqish (Log Out)
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                emailInput.value = '';
+                passwordInput.value = '';
+                messageBox.classList.add('hidden');
+            } catch (error) {
+                console.error("Chiqishda xatolik:", error);
+            }
+        });
+    </script>
+</body>
+</html>
